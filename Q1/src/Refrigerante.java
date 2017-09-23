@@ -6,12 +6,6 @@ public class Refrigerante extends ProdutoNaoDuravel{
 	private int mililitros;
 	private String tipoDeRecipiente;
 	
-	public Refrigerante() {
-		super();
-		mililitros=0;
-		tipoDeRecipiente="";
-	}
-	
 	public Refrigerante(int id, String nome, double preco, String marca, String descricao, Date dataDeFabricacao,
 			Date dataDeValidade, Genero genero, int mililitros, String tipoDeRecipiente) {
 		super(id, nome, preco, marca, descricao, dataDeFabricacao, dataDeValidade, genero);
@@ -36,7 +30,7 @@ public class Refrigerante extends ProdutoNaoDuravel{
 	}
 
 	public boolean estaDisponivelParaVenda(){
-		return true;
+		return estaNaValidade(new Date());
 	}
 
 	public boolean estaNaValidade(Date dataDeHoje){

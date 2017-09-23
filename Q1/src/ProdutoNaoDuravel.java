@@ -12,12 +12,6 @@ public abstract class ProdutoNaoDuravel extends Produto{
 		this.dataDeValidade.setTime(dataDeValidade);
 		this.genero=genero;
 	}
-	public ProdutoNaoDuravel(){
-		super();
-		this.dataDeValidade = new GregorianCalendar();
-		this.dataDeValidade.setTime(new Date());
-		genero=Genero.DESCONHECIDO;
-	}
 	
 	public void setDataDeValidade(Date dataDeValidade){
 		this.dataDeValidade.setTime(dataDeValidade);

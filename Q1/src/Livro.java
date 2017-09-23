@@ -5,14 +5,9 @@ import java.util.Date;
 public class Livro extends ProdutoDuravel{
 	private String autor;
 	private String genero;
-	public Livro() {
-		super();
-		autor="";
-		genero="";
-	}
 	
 	public Livro(int id, String nome, double preco, String marca, String descricao, Date dataDeFabricacao,
-			String materialPredominante, String durabilidade, String avaria, String autor, String genero) {
+			String materialPredominante, String durabilidade, boolean avaria, String autor, String genero) {
 		super(id, nome, preco, marca, descricao, dataDeFabricacao, materialPredominante, durabilidade, avaria);
 		this.autor=autor;
 		this.genero=genero;
@@ -35,7 +30,7 @@ public class Livro extends ProdutoDuravel{
 	}
 	
 	public boolean estaDisponivelParaVenda(){
-		return true;
+		return !getAvaria();
 	}
 
 	public boolean ehEletroEletronico(){

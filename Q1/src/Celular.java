@@ -5,13 +5,9 @@ import java.util.Date;
 public class Celular extends ProdutoDuravel{
 	private float tamanhoDaTela;
 	private String sistemaOperacional;
-	public Celular() {
-		super();
-		tamanhoDaTela=0;
-		sistemaOperacional="";
-	}
+
 	public Celular(int id, String nome, double preco, String marca, String descricao, Date dataDeFabricacao,
-			String materialPredominante, String durabilidade, String avaria, float tamanhoDaTela, String sistemaOperacional) {
+			String materialPredominante, String durabilidade, boolean avaria, float tamanhoDaTela, String sistemaOperacional) {
 		super(id, nome, preco, marca, descricao, dataDeFabricacao, materialPredominante, durabilidade, avaria);
 		this.tamanhoDaTela=tamanhoDaTela;
 		this.sistemaOperacional=sistemaOperacional;
@@ -34,7 +30,7 @@ public class Celular extends ProdutoDuravel{
 	}
 
 	public boolean estaDisponivelParaVenda(){
-		return true;
+		return !getAvaria();
 	}
 
 	public boolean ehEletroEletronico(){

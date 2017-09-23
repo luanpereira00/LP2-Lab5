@@ -6,12 +6,6 @@ public class Pizza extends ProdutoNaoDuravel{
 	private String sabor;
 	private String tamanho;
 	
-	public Pizza() {
-		super();
-		sabor="";
-		tamanho="";
-	}
-	
 	public Pizza(int id, String nome, double preco, String marca, String descricao, Date dataDeFabricacao,
 			Date dataDeValidade, Genero genero, String sabor, String tamanho) {
 		super(id, nome, preco, marca, descricao, dataDeFabricacao, dataDeValidade, genero);
@@ -35,7 +29,7 @@ public class Pizza extends ProdutoNaoDuravel{
 	}
 
 	public boolean estaDisponivelParaVenda(){
-		return true;
+		return estaNaValidade(new Date());
 	}
 
 	public boolean estaNaValidade(Date dataDeHoje){

@@ -13,12 +13,6 @@ public class Chocolate extends ProdutoNaoDuravel{
 		this.sabor=sabor;
 	}
 	
-	public Chocolate() {
-		super();
-		formato="";
-		sabor="";
-	}
-	
 	public String getFormato() {
 		return formato;
 	}
@@ -36,7 +30,7 @@ public class Chocolate extends ProdutoNaoDuravel{
 	}
 	
 	public boolean estaDisponivelParaVenda(){
-		return true;
+		return estaNaValidade(new Date());
 	}
 
 	public boolean estaNaValidade(Date dataDeHoje){

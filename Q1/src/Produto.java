@@ -10,17 +10,6 @@ public abstract class Produto{
 	protected String descricao;
 	protected Calendar dataDeFabricacao;
 	
-	
-	public Produto(){
-		id=0;
-		nome="";
-		preco=0;
-		marca="";
-		descricao="";
-		dataDeFabricacao = new GregorianCalendar();
-		dataDeFabricacao.setTime(new Date());
-	}
-	
 	public Produto(int id, String nome, double preco, String marca, String descricao, Date dataDeFabricacao){
 		this.id=id;
 		this.nome=nome;
