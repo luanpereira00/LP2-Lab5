@@ -75,7 +75,6 @@ public class Carro extends ProdutoDuravel{
 		return false;
 	}
 
-
 	/**
 	* Imprime o carro de uma forma mais legivel
 	*/
